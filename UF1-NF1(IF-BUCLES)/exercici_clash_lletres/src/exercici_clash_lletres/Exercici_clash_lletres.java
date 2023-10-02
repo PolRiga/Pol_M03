@@ -30,25 +30,43 @@ public class Exercici_clash_lletres {
       {
           System.out.println("Elige mago (m) o esbirro (e)");
           eleccio = sc.next().charAt(0);
-          if (eleccio == 'e')
-          {
-              System.out.println("Has elegido mega esbirro");
-          }
-          else if (eleccio == 's')
-          {
-              System.out.println("Has elegido mago electrico");
-          }
+            switch (eleccio) {
+                case 'e':
+                case 'E':
+                    System.out.println("Has elegido mega esbirro");
+                    break;
+                case 's':
+                case 'S':
+                    System.out.println("Has elegido mago electrico");
+                    break;
+                    
+                case 'c':
+                case 'C':
+                    System.out.println("Has elegido Caballero");
+                    break;
+                    
+                case 'b':
+                case 'B':
+                    System.out.println("Has elegido Bandida");
+                    break;  
+                case 'g':
+                case 'G':
+                    System.out.println("Has elegido gigante");
+                    break;
+                case 'j':
+                case 'J':
+                    System.out.println("Has elegido ejercito de esqueletos");
+                    break;   
+                default:
+                    System.out.println("Opcion no valida");
+                    break;
+            }
       }
-      else
-        {
-          System.out.println("Opcion no valida");
-        }
-        if(copes>2000 && copes<3000)
+      else if(copes>2000 && copes<3000)
         {
             System.out.println("Elige caballero (c) o bandida (b)");
             eleccio = sc.next().charAt(0);
-        }   
-        
+            
             if(eleccio == 'c')
             {
                 System.out.println("Has elegido Bandida");
@@ -58,13 +76,13 @@ public class Exercici_clash_lletres {
                 System.out.println("Has elegido Caballero");
             }
             
-            if(copes>=3000)
+        }   
+      else  if(copes>=3000)
             {
                System.out.println("Elige entre esqueletos (j) o gigante (g)");
                eleccio = sc.next().charAt(0);
                
-            }
-            if (eleccio == 'j')
+               if (eleccio == 'j')
             {
                 System.out.println("Has elegido gigante");
             }
@@ -72,9 +90,11 @@ public class Exercici_clash_lletres {
             {
                 System.out.println("Has elegido esqueletos");
             }
+            }
+            
         }
         
     }
-    }
     
-}
+    
+
